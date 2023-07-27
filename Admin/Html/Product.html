@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Admin/Css/Product.css">
+    <script src="/JS/click.js"></script>
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Quản Lý Sản phẩm Dotie Shoes</title>
+</head>
+<style>
+    .Navar_link:nth-child(5){ background-color: rgb(0, 162, 255); color: black;}
+</style>
+<body>
+    <section class="header">
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <div class="Navar-MenuRight1">
+        <div class="Navar_list">
+            <ul class="Navar_listul">
+                <a href="/Admin/Html/Home.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_view_sidebar_black_24dp.png">
+                    <span class="Navar_text">Bảng Điều Khiển</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/fact_check_black_24dp.svg">
+                    <span class="Navar_text">Tin Tức</span>
+                </a>
+                <a href="/Admin/Html/Staff.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_supervised_user_circle_black_24dp.png">
+                    <span class="Navar_text">Nhân Viên</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_diversity_3_black_24dp.png">
+                    <span class="Navar_text">Khách Hàng</span>
+                </a>
+                <a href="/Admin/Html/Product.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_local_offer_black_24dp.png">
+                    <span class="Navar_text">Sản Phẩm</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/receipt_black_24dp.svg">
+                    <span class="Navar_text">Hóa Đơn Nhập</span>
+                </a>
+                <a href="/Admin/Html/HoaDonBan.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_payment_black_24dp.png">
+                    <span class="Navar_text">Hóa Đơn Bán</span>
+                </a>
+                <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_business_black_24dp.png">
+                    <span class="Navar_text">Nhà Cung Cấp</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/admin_panel_settings_black_24dp.svg">
+                    <span class="Navar_text">Nội Bộ</span>
+                </a>
+                <a href="/Admin/Html/Setting.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_settings_black_24dp.png">
+                    <span class="Navar_text">Cài Đặt</span>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="enter-information">
+            <h3 class="text-header">Nhập thông tin sản phẩm</h3>
+            <form class="enter-information-product">
+                <label for="select-type-product"">Loại sản phẩm: </label>
+                <select name="select-type-product" id="loaicv">
+                    <option value="choose">--Chọn Loại sản phẩm</option>
+                    <option value="Sandals">Sandals</option>
+                    <option value="D’orsay flats">D’orsay flats</option>
+                    <option value="Slip-o">Slip-o</option>
+                    <option value="Boots">Boots</option>
+                    <option value="Sneakers">Sneakers</option>
+                    <option value="Slingback">Slingback</option>
+                    <option value="Mary Jane">Mary Janeg</option>
+                    <option value="Platform">Platform</option>
+                    <option value="Ballet flats">Ballet flats</option>
+                    <option value="Chunky heel">Chunky heel</option>
+                </select>
+                <label for="producer">Nhà cung cấp</label>
+                <select name="select-type-product" id="diadiem">
+                    <option value="choose">--Chọn nhà cung cấp--</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Gucci">Gucci</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Puma">Puma</option>
+                    <option value="McQueen">McQueen</option>
+                    <option value="Vans">Vans</option>
+                </select>
+                <label for="MaCv" class="txtmasp">Mã Sản Phẩm: </label>
+                <input type="text" id="MaCv">
+
+                <label for="TenCv" class="txttensp">Tên Sản Phẩm: </label>
+                <input type="text" id="TenCv">
+
+                <label for="hinhanh" class="txt-enterimg">Hình Ảnh: </label>
+                <input type="file" id="ImgCv" onchange="loadFile(event)">
+                <center>
+                    <img id="viewimg" style="max-width:180px;max-height:180px;margin-top: 10px;">
+                </center>
+
+                <label for="Chungchicv" class="txtquantity">Số Lượng: </label>
+                <input type="text" id="Chungchicv">
+
+                <label for="Kynang" class="txtprice">Giá Bán: </label>
+                <input type="text" id="Kynang">
+
+
+            </form>
+            <div class="btns">
+                <button onclick="ThemCv()" class="add-type">Thêm sản phẩm</button>
+                <button class="add-new" onclick="NhapMoi()">Nhập mới</button>
+                <button onclick="CapNhat()" class="reload-info">Cập nhật thông tin</button>
+            </div>
+        </div>
+
+        <div class="list-product">
+            <div class="header-list">
+                <h3 class="text-header"><i class="fa-solid fa-list-ul"></i> Danh sách loại sản phẩm</h3>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Nhập mã, tên sản phẩm muốn tìm...">
+                <button><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+            </div>
+            <table class="table-list-product">
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                        <th>Mã Sản Phẩm </th>
+                        <th>Tên Sản Phẩm </th>
+                        <th>Hình Ảnh</th>
+                        <th>Số Lượng</th>
+                        <th>Giá Bán</th>
+                        <th>Nhà Cung Cấp</th>
+                        <th>Loại Sản Phẩm</th>
+                        <th>Thao Tác</th>
+
+                    </tr>
+                </thead>
+                <tbody id="container-tabledata-table-tbody">
+                    <!-- <tr>
+                        <td class="check-product">
+                            <input type="checkbox" name="check" id="chk-type-product">
+                        </td>
+                        <td class="col-masp">24122002</td>
+                        <td class="col-tensp">Spernova Ultraboost 22</td>
+                        <td class="col-img"><img src="/Album/SanPham/run3.webp"></td>
+                        <td class="col-quantity">24</td>
+                        <td class="col-price">5.650.000đ</td>
+                        <td class="col-type">BOOTS</td>
+                        <td class="col-producer">ADIDAS</td>
+                        <td class="col-thaotac"><i class="fa-solid fa-trash-can"></i></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="quantity">
+                <div class="total-quantity">
+                    <p>Số lượng sản phẩm: </p>
+                    <small id="quantity" style="padding-top: 0px;margin-left: 6px;font-size: 1.1rem; color: #e76800;">0</small>
+                </div>
+                <div class="page">
+                    <button><i class="fa-solid fa-angles-left"></i></button>
+                    <button><i class="fa-solid fa-angle-left"></i></button>
+                    <button>1</i></button>
+                    <button>2</i></button>
+                    <button><i class="fa-solid fa-angle-right"></i></button>
+                    <button><i class="fa-solid fa-angles-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = "/Admin/Html/LoginAdmin.html";
+        }
+
+        var list = JSON.parse(localStorage.getItem('Product')) || [];
+
+        function LoadFile(event) {
+            var image = document.getElementById("Viewing");
+            image.src = URL.createObjectURL(event.target.files[0])
+        }
+
+        function ThemCv() {
+            debugger;
+            var number = /^[0-9]+$/;
+            var macv = document.getElementById("MaCv").value;
+            var tencv = document.getElementById("TenCv").value;
+            var anhcv = document.getElementById("ImgCv");
+            var chungchi = document.getElementById("Chungchicv").value;
+            var kynang = document.getElementById("Kynang").value;
+            var loaicv = document.getElementById("loaicv").value;
+            var diadiem = document.getElementById("diadiem").value;
+
+            if (macv == null || macv == "") {
+                var d = new Date();
+                macv = Number(d);
+            } else {
+
+                if (!macv.match(number) || macv.length != 13) {
+                    alert("Mã sản phẩm phải là kiểu số và có độ dài là 13 ký tự ! Vui lòng nhập lại");
+                    return false;
+                }
+            }
+            if (loaicv == "choose") {
+                alert("Vui lòng chọn loại sản phẩm !");
+                return false;
+            } else if (diadiem == "choose") {
+                alert("Vui lòng chọn nhà cung cấp");
+                return false;
+            } else if (tencv == null || tencv == "") {
+                alert("Tên sản phẩm không được để trống ! Vui lòng nhập lại");
+                return false;
+            } else if (chungchi == null || chungchi == "") {
+                alert("Số lượng không được để trống ! Vui lòng nhập lại");
+                return false;
+            } else {
+                for (let i = 0; i < list.length; i++) {
+                    if (list[i].macv == macv) {
+                        alert("Mã sản phẩm đã tồn tại !  Vui lòng nhập lại");
+                        return false
+                    }
+                }
+            }
+
+            if (list == null) {
+                list = [];
+            }
+            var product = {
+                "macv": macv,
+                "tencv": tencv,
+                "chungchi": chungchi,
+                "kynang": kynang,
+                "loaicv": loaicv,
+                "diadiem": diadiem,
+                "anhcv": anhcv
+            };
+            list.push(product);
+            localStorage.setItem("Product", JSON.stringify(list));
+            alert("Đã thêm thành công !");
+            location.reload();
+        }
+
+        function NhapMoi() {
+            document.getElementById("loaicv").value = 'choose';
+            document.getElementById("diadiem").value = 'choose';
+            document.getElementById("MaCv").value = '';
+            document.getElementById("TenCv").value = '';
+            document.getElementById("ImgCv").value = '';
+            document.getElementById("Chungchicv").value = '';
+            document.getElementById("Kynang").value = '';
+        }
+
+        function LoadData() {
+            var str = "";
+            var sl = 0;
+            list.sort();
+            for (x of list) {
+                sl++;
+                str += `<tr style="text-align: center;">
+                            <td>
+                                <input type="checkbox" name = "check-all">
+                            </td>
+                            <td>` + x.macv + `</td>
+                            <td style="padding: 25px 10px;">` + x.tencv + `</td>
+                            <td><img id="imglink" style="width: 100px; height: 100px; object-fit: contain;" src="" alt=""></td>
+                            <td>` + x.chungchi + `</td>
+                            <td>` + x.kynang + `</td>
+                            <td>` + x.diadiem + `</td>
+                            <td>` + x.loaicv + `</td>
+                            <td>
+                                <i onclick = "SuaCv(` + x.macv + `)" class="fa-solid fa-pen-to-square" style="margin-right: 5px; color: var(--primary-color); cursor: pointer;"></i>
+                                <i onclick = "XoaCv(` + x.macv + `)" class="fa-solid fa-trash-can" style="color: var(--primary-color); cursor: pointer;"></i>
+                            </td>
+                        </tr>`;
+            }
+            document.getElementById("container-tabledata-table-tbody").innerHTML = str;
+            $('#quantity').html(sl);
+        }
+        LoadData();
+
+        function XoaCv(macv) {
+            if (confirm("Bạn có chắc chắn muốn xóa")) {
+                var index;
+                for (let i = 0; i < list.length; i++) {
+                    if (list[i].macv == macv) {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index >= 0) {
+                    list.splice(index, 1);
+                }
+                LoadData();
+                localStorage.setItem('Product', JSON.stringify(list));
+            }
+            location.reload();
+        }
+
+        function CheckAll(parent) {
+            var ids = document.getElementsByTagName('input');
+            for (var i = 0; i < ids.length; i++) {
+                if (ids[i].name == "check-all") {
+                    ids[i].checked = parent.checked;
+                }
+            }
+        }
+
+        function loadFile(event) {
+            var image = document.getElementById('viewimg');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+
+        function SuaCv(macv) {
+            for (x of list) {
+                if (x.macv == macv) {
+                    document.getElementById("loaicv").value = x.loaicv;
+                    document.getElementById("diadiem").value = x.diadiem;
+                    document.getElementById("MaCv").value = x.macv;
+                    document.getElementById("TenCv").value = x.tencv;
+                    document.getElementById("Chungchicv").value = x.chungchi;
+                    document.getElementById("Kynang").value = x.kynang;
+                    //document.getElementById("ImgCv").value = x.anhcv;
+                }
+            }
+        }
+
+        function CapNhat() {
+            debugger;
+            var LoaiCv = document.getElementById('loaicv').value;
+            var DiaDiem = document.getElementById('diadiem').value;
+            var MaCv = document.getElementById("MaCv").value;
+            var TenCv = document.getElementById("TenCv").value;
+            var ChungChiCv = document.getElementById("Chungchicv").value;
+            var KyNang = document.getElementById("Kynang").value;
+            var LinkImg = document.getElementById("ImgCv").value;
+            var check = true;
+
+            if (LoaiCv == "choose") {
+                alert("Vui lòng chọn loại sản phẩm!");
+                return false;
+            } else if (DiaDiem == "choose") {
+                alert("Vui lòng chọn nhà cung cấp!");
+                return false;
+            } else if (TenCv == null || TenCv == "") {
+                alert("Tên sản phẩm không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (MaCv == null || MaCv == "") {
+                alert("Mã sản phẩm không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (ChungChiCv == null || ChungChiCv == "") {
+                alert("Số lượngkhông được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (KyNang == null || KyNang == "") {
+                alert("Giá bán không được để trống! Vui lòng nhập lại!");
+                return false;
+            }
+
+            for (x of list) {
+                if (x.macv == MaCv) {
+                    x.tencv = TenCv;
+                    x.loaicv = LoaiCv;
+                    x.diadiem = DiaDiem;
+                    x.chungchi = ChungChiCv;
+                    x.kynang = KyNang;
+                    check = false;
+                    break
+                }
+            }
+
+            if (check == false) {
+                alert("Cập nhật thông tin thành công !");
+                localStorage.setItem("Product", JSON.stringify(list));
+                location.reload();
+            } else {
+                alert("Cập nhật không thành công");
+            }
+        }
+    </script>
+</body>
+</html>

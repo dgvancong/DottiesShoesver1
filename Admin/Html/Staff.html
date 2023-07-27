@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Admin/Css/Staff.css">
+    <script src="/JS/click.js"></script>
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Quản Lý Nhân Viên - Dotie Shoes</title>
+</head>
+<body>
+    <section class="header">
+        <div class="box-login" id="box-t">
+            Xin chào <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <div class="Navar-MenuRight1">
+        <div class="Navar_list">
+            <ul class="Navar_listul">
+                <a href="/Admin/Html/Home.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_view_sidebar_black_24dp.png">
+                    <span class="Navar_text">Bảng Điều Khiển</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/fact_check_black_24dp.svg">
+                    <span class="Navar_text">Tin Tức</span>
+                </a>
+                <a href="/Admin/Html/Staff.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_supervised_user_circle_black_24dp.png">
+                    <span class="Navar_text">Nhân Viên</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_diversity_3_black_24dp.png">
+                    <span class="Navar_text">Khách Hàng</span>
+                </a>
+                <a href="/Admin/Html/Product.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_local_offer_black_24dp.png">
+                    <span class="Navar_text">Sản Phẩm</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/receipt_black_24dp.svg">
+                    <span class="Navar_text">Hóa Đơn Nhập</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_payment_black_24dp.png">
+                    <span class="Navar_text">Hóa Đơn Bán</span>
+                </a>
+                <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_business_black_24dp.png">
+                    <span class="Navar_text">Nhà Cung Cấp</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/admin_panel_settings_black_24dp.svg">
+                    <span class="Navar_text">Nội Bộ</span>
+                </a>
+                <a href="/Admin/Html/Setting.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_settings_black_24dp.png">
+                    <span class="Navar_text">Cài Đặt</span>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="enter-information">
+            <h3 class="text-header">Nhập thông tin nhân viên</h3>
+            <form action="" class="enter-information-product">
+                <label for="manv">Mã nhân viên</label>
+                <input type="text" id="manv" placeholder="Nhập mã nhân viên...">
+                <label for="tennv">Tên nhân viên</label>
+                <input type="text" id="tennv" placeholder="Nhập tên nhân viên">
+                <label for="enter-img" class="txt-enterimg">Hình ảnh</label>
+                <input type="file" id="imgstaff" onchange="loadFile(event)">
+                <center>
+                    <img id="viewimg" style="max-width:180px;max-height:180px;margin-top: 10px;">
+                </center>
+                <label for="enter-email" class="txtmasp">Email</label>
+                <input type="email" id="enter-email">
+                <label for="phone" class="txttensp">Số điện thoại</label>
+                <input type="text" id="phone">
+                <label for="per" class="txtquantity">Quyền:</label>
+                <select name="" id="per">
+                    <option value="choose">--Chọn quyền--</option>
+                    <option value="Quản lý">Quản lý</option>
+                    <option value="Nhân viên">Nhân viên</option>
+                </select>
+                <label for="status" class="txtprice">Trang thái</label>
+                <select name="" id="trangthai">
+                    <option value="choose">--Chọn trạng thái</option>
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Khoá">Khoá</option>
+                </select>
+            </form>
+            <div class="btns">
+                <button class="add-type" onclick="addstaff()">Thêm nhân viên</button>
+                <button class="add-new" onclick="NhapMoi()">Nhập mới</button>
+                <button class="reload-info" onclick="CapNhat()">Cập nhật thông tin</button>
+            </div>
+        </div>
+        <div class="list-product">
+            <div class="header-list">
+                <h3 class="text-header"><i class="fa-solid fa-list-ul"></i> Danh sách nhân viên</h3>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Nhập mã, tên nhân viên muốn tìm...">
+                <button><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+            </div>
+            <table class="table-list-product">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" onclick="CheckAll(this)">
+                        </th>
+                        <th>Mã nhân viên</th>
+                        <th>Tên nhân viên</th>
+                        <th>Hình ảnh</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Quyền</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="liststaff">
+                    <!-- <tr>
+                        <td class="check-product">
+                            <input type="checkbox" name="check" id="chk-type-product">
+                        </td>
+                        <td class="col-masp">1238380192832</td>
+                        <td class="col-tensp">Đồng Văn Công</td>
+                        <td class="col-img"><img src="/Album/BoCuc/z3350769854510_7b6c0e045af0f162f1e0ff6c2a7ca952 (2).jpg" alt=""></td>
+                        <td class="col-quantity">conkoi090@gmail.com</td>
+                        <td class="col-price">0334624356</td>
+                        <td class="col-type">Nhân viên</td>
+                        <td class="col-producer">Hoạt động</td>
+                        <td class="col-thaotac"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="quantity">
+                <div class="total-quantity">
+                    <p>Số lượng nhân viên: </p>
+                    <small id="soluong" style="padding-top: 0px;margin-left: 6px;font-size: 1.1rem; color: #e76800;">1</small>
+                </div>
+                <div class="page">
+                    <button><i class="fa-solid fa-angles-left"></i></button>
+                    <button><i class="fa-solid fa-angle-left"></i></button>
+                    <button>1</i></button>
+                    <button>2</i></button>
+                    <button><i class="fa-solid fa-angle-right"></i></button>
+                    <button><i class="fa-solid fa-angles-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = 'LoginAdmin.html';
+        }
+
+        function LogOut() {
+            localStorage.setItem('user', null);
+            window.location.href = " LoginAdmin.html";
+        }
+
+        var list = JSON.parse(localStorage.getItem('staff')) || [];
+
+        function NhapMoi() {
+            document.getElementById('manv').value = '';
+            document.getElementById('tennv').value = '';
+            document.getElementById('imgstaff').value = '';
+            document.getElementById('enter-email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('per').value = 'choose';
+            document.getElementById('trangthai').value = 'choose';
+        }
+
+        function addstaff() {
+            var manv = document.getElementById('manv').value;
+            var tennv = document.getElementById('tennv').value;
+            var imgnv = document.getElementById('imgstaff').value;
+            var emailnv = document.getElementById('enter-email').value;
+            var sdtnv = document.getElementById('phone').value;
+            var quyen = document.getElementById('per').value;
+            var trangthai = document.getElementById('trangthai').value;
+            var number = /^[0-9]+$/;
+            var atposition = emailnv.indexOf("@");
+            var dotposition = emailnv.lastIndexOf(".");
+
+            if (manv == null || manv == "") {
+                var d = new Date();
+                manv = Number(d);
+            } else if (!manv.match(number) || manv.length < 6) {
+                alert("Mã khách hàng phải là kiểu số và có độ dài lớn hơn 6 ký tự! Vui lòng nhập lại!");
+                return false;
+            }
+
+            if (tennv == null || tennv == "") {
+                alert("Tên khách hàng không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (sdtnv == null || sdtnv == "") {
+                alert("Số điện thoại khách hàng không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (!sdtnv.match(number) || sdtnv.length != 10) {
+                alert("Số điện thoại khách hàng phải là kiểu số và có độ dài là 10 ký tự! Vui lòng nhập lại!");
+                return false;
+            } else if (emailnv != "" && emailnv != null && (atposition < 1 || dotposition < (atposition + 2) || (dotposition + 2) >= emailnv.length)) {
+                alert("Email khách hàng không hợp lệ! Vui lòng nhập lại!");
+                return false;
+            } else {
+                for (var x of list) {
+                    if (x.manv == manv) {
+                        alert("Mã nhân viên đã tồn tại! Vui lòng nhập lại!")
+                        return false;
+                    }
+                }
+            }
+            if (list == null) list = [];
+            var staff = {
+                "manv": manv,
+                "tennv": tennv,
+                "imgnv": imgnv,
+                "emailnv": emailnv,
+                "sdtnv": sdtnv,
+                "quyen": quyen,
+                "trangthai": trangthai
+            };
+            list.push(staff);
+            localStorage.setItem("staff", JSON.stringify(list));
+            alert("Đã thêm thành công!");
+            location.reload();
+        }
+        // <td class="col-img"><img src="`+ x.imgnv + `" ></td>
+
+        function LoadData() {
+            var str = "";
+            var index = 0;
+            for (x of list) {
+                index++;
+                str += 
+                `
+                    <tr>
+                        <td class="check-product">
+                            <input type="checkbox" name="check" id="chk-type-product">
+                        </td>
+                        <td class="col-masp">` + x.manv + `</td>
+                        <td class="col-tensp">` + x.tennv + `</td>
+                        <td class="col-img"><img src="/Album/BoCuc/z3350769854510_7b6c0e045af0f162f1e0ff6c2a7ca952 (2).jpg"></td>
+                        <td class="col-quantity">` + x.emailnv + `</td>
+                        <td class="col-price"> ` + x.sdtnv + `</td>
+                        <td class="col-type"> ` + x.quyen + `</td>
+                        <td class="col-producer"> ` + x.trangthai + `</td>
+                        <td class="col-thaotac">
+                            <i class="fa-solid fa-pen-to-square" onclick="SuaNV(` + x.manv + `)"></i>
+                            <i class="fa-solid fa-trash-can" onclick="XoaKhachHang(` + x.manv + `)"></i>
+                        </td>
+                    </tr>
+                `;
+                document.getElementById('liststaff').innerHTML = str;
+                $('#soluong').html(index);
+            }
+        }
+
+        LoadData();
+
+        function XoaKhachHang(manv) {
+            if (confirm("Bạn chắc chắn muốn xóa!")) {
+                var index;
+                for (let i = 0; i < list.length; i++) {
+                    if (list[i].manv == manv) {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index >= 0) {
+                    list.splice(index, 1);
+                }
+                LoadData();
+                localStorage.setItem('staff', JSON.stringify(list));
+            }
+            location.reload();
+        }
+
+        function CheckAll(parent) {
+            var ids = document.getElementsByTagName('input');
+            for (var i = 0; i < ids.length; i++) {
+                if (ids[i].name == "check_all") {
+                    ids[i].checked = parent.checked;
+                }
+            }
+        }
+
+        function SuaNV(manv) {
+            for (x of list) {
+                if (x.manv == manv) {
+                    document.getElementById("manv").value = x.manv;
+                    document.getElementById("tennv").value = x.tennv;
+                    document.getElementById("phone").value = x.sdtnv;
+                    document.getElementById("enter-email").value = x.emailnv;
+                    document.getElementById("per").value = x.quyen;
+                    document.getElementById("trangthai").value = x.trangthai;
+                }
+            }
+        }
+
+        function CapNhat() {
+            debugger;
+            var manv = document.getElementById("manv").value;
+            var tennv = document.getElementById("tennv").value;
+            var imgnv = document.getElementById("imgstaff").value;
+            var sdtnv = document.getElementById("phone").value;
+            var emailnv = document.getElementById("enter-email").value;
+            var quyen = document.getElementById("per").value;
+            var trangthai = document.getElementById("trangthai").value;
+            var ok = true;
+
+            if (manv == null || manv == "") {
+                alert("Mã nhân viên không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (tennv == null || tennv == "") {
+                alert("Tên nhân viên không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (sdtnv == null || sdtnv == "") {
+                alert("Số điện thoại nhân viên phải là kiểu số và có độ dài là 10 ký tự! Vui lòng nhập lại!");
+                return false;
+            } else if (emailnv == null || emailnv == "") {
+                alert("Email nhân viên không được để trống! Vui lòng nhập lại!");
+                return false;
+            } else if (quyen == "choose") {
+                alert("Vui lòng chọn quyền!");
+                return false;
+            } else if (trangthai == "choose") {
+                alert("Vui lòng chọn trạng thái!");
+                return false;
+            }
+
+            for (x of list) {
+                if (x.manv == manv) {
+                    x.tennv = tennv;
+                    x.imgnv = imgnv
+                    x.emailnv = emailnv;
+                    x.sdtnv = sdtnv;
+                    x.quyen = quyen;
+                    x.trangthai = trangthai;
+                    ok = false;
+                    break;
+                }
+            }
+
+            if (ok == false) {
+                alert("Cập nhật thông tin thành công!");
+                localStorage.setItem("Staff", JSON.stringify(list));
+                location.reload();
+            } else {
+                alert("Cập nhật thông tin thất bại!");
+            }
+        }
+
+        function loadFile(event) {
+                var image = document.getElementById('viewimg');
+                image.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>

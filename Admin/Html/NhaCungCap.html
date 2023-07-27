@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Admin/Css/Product.css">
+        <script src="/JS/click.js"></script>
+        <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <title>Quản Lý Nhà Cung Cấp Dotie Shoes</title>
+    </head>
+<body>
+    <section class="header">
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <div class="Navar-MenuRight1">
+        <div class="Navar_list">
+            <ul class="Navar_listul">
+                <a href="/Admin/Html/Home.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_view_sidebar_black_24dp.png">
+                    <span class="Navar_text">Bảng Điều Khiển</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/fact_check_black_24dp.svg">
+                    <span class="Navar_text">Tin Tức</span>
+                </a>
+                <a href="/Admin/Html/Staff.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_supervised_user_circle_black_24dp.png">
+                    <span class="Navar_text">Nhân Viên</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_diversity_3_black_24dp.png">
+                    <span class="Navar_text">Khách Hàng</span>
+                </a>
+                <a href="/Admin/Html/Product.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_local_offer_black_24dp.png">
+                    <span class="Navar_text">Sản Phẩm</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/receipt_black_24dp.svg">
+                    <span class="Navar_text">Hóa Đơn Nhập</span>
+                </a>
+                <a href="/Admin/Html/HoaDonBan.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_payment_black_24dp.png">
+                    <span class="Navar_text">Hóa Đơn Bán</span>
+                </a>
+                <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_business_black_24dp.png">
+                    <span class="Navar_text">Nhà Cung Cấp</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/admin_panel_settings_black_24dp.svg">
+                    <span class="Navar_text">Nội Bộ</span>
+                </a>
+                <a href="/Admin/Html/Setting.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_settings_black_24dp.png">
+                    <span class="Navar_text">Cài Đặt</span>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="enter-information">
+            <h3 class="text-header">Nhập thông tin nhà cung cấp</h3>
+            <form action="" class="enter-information-product">
+                <label for="select-type-product">Mã nhà cung cấp</label>
+                <input type="text" placeholder="Nhập mã nhà cung cấp...">
+                <label for="producer">Tên cung cấp</label>
+                <input type="text" placeholder="Nhập tên nhà cung cấp...">
+                <label for="enter-masp" class="txtmasp">Số điện thoại</label>
+                <input type="text" id="enter-masp" placeholder="Nhập số điện thoại nhà cung cấp...">
+                <label for="enter-tensp" class="txttensp">Email</label>
+                <input type="text" id="enter-tensp" placeholder="Nhập email nhà cung cấp">
+                <label for="enter-quantity" class="txtquantity">Địa chỉ</label>
+                <input type="text" id="enter-quantity" placeholder="Nhập địa chỉ nhà cung cấp...">
+            </form>
+            <div class="btns">
+                <button class="add-type">Thêm nhà cung cấp</button>
+                <button class="add-new">Nhập mới</button>
+                <button class="reload-info">Cập nhật thông tin</button>
+            </div>
+        </div>
+        <div class="list-product">
+            <div class="header-list">
+                <h3 class="text-header"><i class="fa-solid fa-list-ul"></i> Danh sách nhà cung cấp</h3>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Nhập mã, tên nhà cung cấp muốn tìm...">
+                <button><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm</button>
+            </div>
+            <table class="table-list-product">
+                <thead>
+                    <tr>
+                        <th>
+                        </th>
+                        <th>Mã nhà cung cấp</th>
+                        <th>Tên nhà cung cấp</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="check-product">
+                            <input type="checkbox" name="check" id="chk-type-product">
+                        </td>
+                        <td class="col-masp">24122002</td>
+                        <td class="col-tensp">ADIDAS</td>
+                        <td class="col-img">0334624356</td>
+                        <td class="col-quantity">adidasvn@gmail.com</td>
+                        <td class="col-price" style="color: black;">Adidas Thanh Hà - Hải Dương</td>
+                        <td class="col-thaotac"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="quantity">
+                <div class="total-quantity">
+                    <p>Số lượng nhà cung cấp: </p>
+                    <small style="padding-top: 0px;margin-left: 6px;font-size: 1.1rem; color: #e76800;">1</small>
+                </div>
+                <div class="page">
+                    <button><i class="fa-solid fa-angles-left"></i></button>
+                    <button><i class="fa-solid fa-angle-left"></i></button>
+                    <button>1</i></button>
+                    <button>2</i></button>
+                    <button><i class="fa-solid fa-angle-right"></i></button>
+                    <button><i class="fa-solid fa-angles-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

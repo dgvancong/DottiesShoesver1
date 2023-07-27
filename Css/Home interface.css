@@ -1,0 +1,181 @@
+.Homeinterface-Header{ height: 50px; display: flex; justify-content: space-evenly;}
+
+.Homeinterface-Header-Seach { width: 410px; height: 50px; padding-top: 4.5px;} 
+
+::placeholder{ color: #333333; font-size: 16px;}
+
+.fa-magnifying-glass{ color: #333333; width: 35px; font-size: 18px; }
+
+.Banner_Seach_Text{ height:45px; width: 87%; background-color: none; display: flex; padding-left: 85px;}
+
+.Banner_Seach_Text input{ height: 45px; width: 500%; border: none; padding-left: 25px; flex: 1; background-color: #f1f1f1;}
+
+.Banner_Seach_Icon{ float: right; width: 28%; height: 45px; line-height: 50px; text-align: center; background-color: #f1f1f1;}
+
+.Homeinterface-Navar{height: 515px; width: 100%;}
+
+.Homeinterface-Navar .Homeinterface-Navar-Img img{width: 100%; margin-top: 15px;}
+
+.Homeinterface-Navar-Img-Font{position: absolute; top: 285px; left: 440px;}
+
+.Homeinterface-Navar-Img-Font .Homeinterface-Navar-Img-Font-P{padding-left: 135px; font-size: 37px; font-family: 'Courier New', Courier, monospace;}
+
+.Homeinterface-Navar-Img-Font span{font-size: 18px; font-family: 'Courier New', Courier, monospace;  padding-left: 40px;}
+
+.Homeinterface-Navar-Img-Button{position: absolute; top: 385px; left: 615px;}
+
+.Homeinterface-Navar-Img-Button button{width: 150px; height: 50px;}
+ 
+.Homeinterface-Navar-Img-Button a{font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px; color: #000000;}
+
+.Homeinterface-Content-Font{ padding: 50px 0; text-align: center; height: 50px;}
+
+.Homeinterface-Content-Font h2{ font-size: 37px; line-height: 1.6; margin: 0; font-weight: 500; line-height: 1.1; font-family: 'Courier New', Courier, monospace;}
+
+.Homeinterface-Content-Font1{ padding: 50px 0; text-align: center; height: 50px;}
+
+.Homeinterface-Content-Font1 h2{ font-size: 37px; line-height: 1.6; margin: 0; font-weight: 500; line-height: 1.1; font-family: 'Courier New', Courier, monospace;}
+
+.Homeinterface-Content-Font-Left{ height: 50px; text-align: center; padding: 50px 0;}
+
+.Homeinterface-Content-Font-Left h2{ font-size: 37px; line-height: 1.6; margin: 0; font-weight: 500; line-height: 1.1; font-family: 'Courier New', Courier, monospace;}
+
+.Homeinterface-Content-Product{ height: 550px; display: flex; justify-content: space-evenly;}
+
+.Homeinterface-Left-Center-Product{height: 450px; width: 30%;}
+
+.Homeinterface-Right-Center-Product{height: 450px; width: 60%; display: flex; justify-content: space-between;}
+
+.Content_Center_Product{ width: 240px; height: 450px;}
+
+.Content_Center_Product_Jpg{ width: 240px; height: 323px;}
+
+.Homeinterface-Content-Product .Content_Center_Product > .Content_Center_Product_Jpg { position: relative;}
+
+.Homeinterface-Right-Center-Product .Content_Center_Product > .Content_Center_Product_Jpg > img { width: 100%; height: 100%;}
+ 
+.Homeinterface-Right-Center-Product .Content_Center_Product > .Content_Center_Product_Jpg > .Content_Center_Product_Jpg_Hide { position: absolute; top: 0px; left: 0px; opacity: 0; transition: 1s;}
+
+.Homeinterface-Right-Center-Product .Content_Center_Product > .Content_Center_Product_Jpg > .Content_Center_Product_Jpg_Hide:hover { opacity: 1;}
+
+.Content_Center_Product_Font{width: 211px; height: 84px;}
+
+.Content_Center_Product .Content_Center_Product_Font{ text-align: left;}
+
+.Content_Center_Product_Name {padding-top: 15px; font-size: 20px;}
+
+.Content_Center_Product_Name a{ font-family: 'Courier New', Courier, monospace; color: #000000;}
+
+.Content_Center_Product_Name h5{ font-family: 'Courier New', Courier, monospace;}
+
+.Content_Center_Product_Price{padding-top: 10px; font-size: 17px;}
+
+.Content_Center_Product_Price span{ font-family: 'Courier New', Courier, monospace;}
+
+.Content_Top_1 { height: 100px; position: absolute; top: 1231px; left: 805px;}
+
+.Content_Top_1 button { width: 125px; height: 44px;}
+
+.Content_Top_1 button:hover {background-color: #000000; color: #ffffff;}
+
+.Content_Top_1 button:hover > a {background-color: #000000; color: #ffffff;}
+
+.Content_Top_1 a{ font-size: 15px;}
+
+.Content_Top_2 { height: 100px; position: absolute; top: 1931px; left: 352px;}
+
+.Content_Top_2 button { width: 125px; height: 44px;}
+
+.Content_Top_2 button:hover {background-color: #000000; color: #ffffff;}
+
+.Content_Top_2 button:hover > a {background-color: #000000; color: #ffffff;}
+
+.Content_Top_2 a{ font-size: 15px;}
+
+.Content_Top_3 { height: 100px; position: absolute; top: 2631px; left: 815px;}
+
+.Content_Top_3 button { width: 125px; height: 44px;}
+
+.Content_Top_3 button:hover {background-color: #000000; color: #ffffff;}
+
+.Content_Top_3 button:hover > a {background-color: #000000; color: #ffffff;}
+
+.Content_Top_3 a{ font-size: 15px;}
+
+.Content_Top_4 { height: 100px; position: absolute; top: 3331px; left: 372px;}
+
+.Content_Top_4 button { width: 125px; height: 44px;}
+
+.Content_Top_4 button:hover {background-color: #000000; color: #ffffff;}
+
+.Content_Top_4 button:hover > a {background-color: #000000; color: #ffffff;}
+
+.Content_Top_4 a{ font-size: 15px;}
+
+.Homeinterface-Content-New{height: 550px;}
+
+.Homeinterface-Content-New-Men-Img{overflow: hidden;}
+
+.Homeinterface-Content-New-Men-Img img{width: 100%; height: auto; display: block; transition: all 0.8s ease;}
+
+.Homeinterface-Content-New-Men-Img img:hover{transform: scale(1.5);}
+
+.Homeinterface-Content-New-Women-Img{overflow: hidden;}
+
+.Homeinterface-Content-New-Women-Img img{width: 100%; height: auto; display: block; transition: all 0.8s ease;}
+
+.Homeinterface-Content-New-Women-Img img:hover{transform: scale(1.5);}
+
+.Homeinterface-Content-New-Men{height: 550px; width: 595px; float: left; padding-left: 20px;}
+
+.Homeinterface-Content-New-Men-font{top: 4190px; left: 75px; position: absolute;}
+
+.Homeinterface-Content-New-Men-font h2{ font-size: calc(.64525rem + 1.78306vw);}
+
+.Homeinterface-Content-New-Men-font button{ width: 90px; height: 35px; color: #0a0808; font-size: 1rem; margin-top: 25px; cursor: pointer;background-color: #ffffff; border: none; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+.Homeinterface-Content-New-Women-Font{top: 4190px; right: 366px; position: absolute;}
+
+.Homeinterface-Content-New-Women-Font h2{ font-size: calc(.64525rem + 1.78306vw);}
+
+.Homeinterface-Content-New-Women-Font button{width: 90px; height: 35px; color: #0a0808; font-size: 1rem; background-color: #ffffff; margin-top: 25px; cursor: pointer; border: none; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+.Homeinterface-Content-New-Women{height: 550px; width: 595px; float: right; padding-right: 20px;}
+
+.Homeinterface-Header-Menu-li-a1:first-child::after{ width: 100%;}
+
+.Homeinterface-Header .sticky{ position: fixed; left: 0; padding: 15px 5%; background-color: #ffffff; top: 0; width: 100%; height: 50px; z-index: 1000;}
+
+.Homeinterface-Header-Menu{ display: flex;}
+
+.Head-Footer-Email{ padding-top: 13px; padding-left: 15px; padding-right: 45px; padding-top: 1.5rem; background: transparent}
+
+
+/* Menu repon */
+/* Tablet */
+@media (max-width: 1023px){
+    .Menu_Center_Ul{
+        display: none;
+    }
+    .btn-icon{
+        position: absolute;
+        top: 50%;
+        left: 38px;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+   }
+    .fa-bars{
+        display: none;
+   }
+
+}
+
+
+
+
+
+
+
+
+
+

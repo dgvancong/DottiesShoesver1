@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Css/EXPLORER.css">
+    <link rel="stylesheet" href="/Css/Login interface.css">
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title> Đăng Nhập - Dotie Shoes</title>
+</head>
+<body>
+    <div class="Homeinterface-Top">
+        <div class="Homeinterface-Banner">
+            <div class="Homeinterface-Banner-Logo">
+                <p class="Homeinterface-Banner-Logo-P"><a href="/Html/Home interface.html"><img src="/Album/BoCuc/Dotie.png"></a></p>
+            </div>
+            <div class="Homeinterface-Banner-services">
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img">
+                        <img src="/Album/BoCuc/baseline_call_black_24dp.png" height="25px">
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>Hotline mua hàng</p>
+                        <span>Gọi ngay: 0334624356</span>
+                    </div>
+                </div>
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img" height="25px">
+                        <img src="/Album/BoCuc/baseline_local_shipping_black_24dp.png">
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>Giao hàng tận nơi</p>
+                        <span>Miễn phí từ 5 sản phẩm</span>
+                    </div>
+                </div>
+                <div class="Homeinterface-Banner-services-item">
+                    <div class="Homeinterface-Banner-services-item-img">
+                        <img src="/Album/BoCuc/baseline_autorenew_black_24dp.png" height="25px"z>
+                    </div>
+                    <div class="Homeinterface-Banner-services-item-content">
+                        <p>1 Đổi 1 nếu lỗi hàng</p>
+                        <span>Trong vòng 7 ngày</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Homeinterface-Banner-Icon">
+                <div class="Homeinterface-Banner-Icon-User">
+                    <a href="/Html/Login interface.html" title="Tài khoản"><img src="/Album/BoCuc/baseline_account_circle_black_24dp.png"></a>  
+                </div>
+                <div class="Homeinterface-Banner-Icon-Cart">
+                    <a href="/Html/Cart interface.html" title="Giỏ hàng"><img src="/Album/BoCuc/baseline_shopping_bag_black_24dp.png"></img></a>
+                </div>
+                <div class="Homeinterface-Banner-Icon-Bell">
+                    <a href="/Html/Cart interface.html" title="Thông báo"><img src="/Album/BoCuc/baseline_notifications_black_24dp.png" ></img></a>
+                </div>
+            </div>
+        </div>
+        <div class="Homeinterface-Header">
+            <div class="Homeinterface-Header-Menu">
+                <ul class="Homeinterface-Header-Menu-Ul">
+                    <li class="Homeinterface-Header-Menu-li"><a href="/Html/Home interface.html" class="Homeinterface-Header-Menu-li-a1">HOME</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="" class="Homeinterface-Header-Menu-li-a">MEN</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="" class="Homeinterface-Header-Menu-li-a">WOMEN</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="/Html/Nike interface.html" class="Homeinterface-Header-Menu-li-a">NIKE</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="" class="Homeinterface-Header-Menu-li-a">ADIDAS</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="" class="Homeinterface-Header-Menu-li-a">PUMA</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="" class="Homeinterface-Header-Menu-li-a">GUCCI</a></li>
+                    <li class="Homeinterface-Header-Menu-li"><a href="/Html/About.html" class="Homeinterface-Header-Menu-li-a">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="Homeinterface-Header-Seach">
+                <div class="Banner_Seach_Text">
+                    <input type="search" placeholder="Tìm kiếm sản phẩm..." >
+                    <a href="#" class="Banner_Seach_Icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Content">
+        <div class="Content_Left">  
+            <h1 class="Content_left_font"> Đăng Nhập</h1>
+            <h1 class="Content_left_font_hr"></h1>
+        </div>
+        <form id="lginKH">
+            <div class="Content_right_login">
+                <input type="email" name="LoginUser" placeholder="Email" id="tk"> 
+            </div>
+            <div class="Content_right_password">
+                <input type="password" name="LoginPassword" placeholder="Mật Khẩu" id="mk"> 
+            </div>
+            <div class="Content_right_font">
+                Forgot Password?
+            </div>
+            <div id="baoloi"></div>
+            <div class="Content_right_test" id="dangnhap">
+                <button onclick="login();"> Đăng Nhập </button>
+            </div>
+            <div class="Content_right_font_1">
+                Or login with
+            </div>
+            <div class="link">
+                <div class="Content_right_Facebook">
+                    <a href="https://www.facebook.com/DonggVannCongg/"><i class="fa-brands fa-facebook"><span> Facebook </span></i></a>
+                </div>
+                <div class="Content_right_Instargam">
+                    <a href="https://www.instagram.com/12th24.2002/"><i class="fa-brands fa-instagram"><span> Instagram </span></i></a>
+                </div>
+            </div>
+            <div class="Content_right_font_2">
+                Don't have account?  <span><a href="/Html/Signup interface.html"> Signup Now .</a></span>
+            </div>
+        </form>
+        <script>
+            var list = JSON.parse(localStorage.getItem('Customer')) || [];
+    
+            $("#lginKH").submit(function (event) {
+                var taikhoan = $('#tk').val();
+                var matkhau = $('#mk').val();
+                for (x of list) {
+                    if (taikhoan == x.email && matkhau == x.password) {
+                        var user = {
+                    "username": x.username,
+                    "email": x.email,
+                    "password": x.password
+                        };
+                        localStorage.setItem('userKH', JSON.stringify(user));
+                        window.location.href = "About.html";
+                    }
+                    else if (taikhoan != x.email && matkhau != x.password) {
+                        alert("Tên đăng nhập hoặc mật khẩu sai! Vui lòng nhập lại!");
+                        break;
+                    }
+                }
+                event.preventDefault();
+            });
+        </script>
+    </div>
+    <footer id="footercontent">
+        <div class="container">
+            <div class="row-1">
+                <div class="email-signup justify-content-center d-flex mx-0">
+                    <p class="font-body fontweight-bold email-content-text mx-0 my-auto mr-2">
+                        Be the first to know about new arrivals
+                    </p>
+                    <button class="ok" type="submit">Sign up</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg" alt="" class="logo" />
+                    <p>
+                        Trang mua sắm trực tuyến của thương hiệu Dotties Shoes, thời trang nam, nữ, phụ kiện, giúp bạn tiếp cận xu hướng thời trang mới nhất.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/DonggVannCongg">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/12th24.2002/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC2nBEyZayY3A8Y33IlgEDYw">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col" id="services">
+                    <h3>Liên kết</h3>
+                    <div class="links">
+                        <a href="#">Chính sách bán hàng</a>
+                        <a href="#">Chính sách bảo hành/ Đổi Trả hàng</a>
+                        <a href="#">Hình thức thanh toán</a>
+                        <a href="#">Chính sách vận chuyển</a>
+                        <a href="#">Điều khoản dịch vụ</a>
+                    </div>
+                </div>
+                <div class="col" id="useful-links">
+                    <h3>Về Chúng Tôi</h3>
+                    <div class="links">
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Our Policy</a>
+                        <a href="#">Hệ Thống Cửa Hàng</a>
+                    </div>
+
+                </div>
+                <div class="col" id="contact">
+                    <h3>Thông tin liên hệ</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>Số nhà 10, Đường Nguyễn Hải Thanh<br /> Thanh Hà, Hải Dương </p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>0334624356</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

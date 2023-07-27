@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Admin/Css/Setting.css">
+        <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <title>Cài Đặt - Dotie Shoes</title>
+    </head>
+<body>
+    <section class="header">
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <div class="Navar-MenuRight1">
+        <div class="Navar_list">
+            <ul class="Navar_listul">
+                <a href="/Admin/Html/Home.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_view_sidebar_black_24dp.png">
+                    <span class="Navar_text">Bảng Điều Khiển</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/fact_check_black_24dp.svg">
+                    <span class="Navar_text">Tin Tức</span>
+                </a>
+                <a href="/Admin/Html/Staff.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_supervised_user_circle_black_24dp.png">
+                    <span class="Navar_text">Nhân Viên</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_diversity_3_black_24dp.png">
+                    <span class="Navar_text">Khách Hàng</span>
+                </a>
+                <a href="/Admin/Html/Product.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_local_offer_black_24dp.png">
+                    <span class="Navar_text">Sản Phẩm</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/receipt_black_24dp.svg">
+                    <span class="Navar_text">Hóa Đơn Nhập</span>
+                </a>
+                <a href="/Admin/Html/HoaDonBan.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_payment_black_24dp.png">
+                    <span class="Navar_text">Hóa Đơn Bán</span>
+                </a>
+                <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_business_black_24dp.png">
+                    <span class="Navar_text">Nhà Cung Cấp</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/admin_panel_settings_black_24dp.svg">
+                    <span class="Navar_text">Nội Bộ</span>
+                </a>
+                <a href="#" class="Navar_link active">
+                    <img class="Navar_icon" src="/Admin/JPG/baseline_settings_black_24dp.png">
+                    <span class="Navar_text">Cài Đặt</span>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="image">
+        <img class="image__img" src="/Album/BoCuc/z3466057662076_6d5b1395524ce7e00f593b4f4da343d9.jpg">
+        <div class="image__overlay">
+            <div class="image__title">Chỉnh Sửa</div>
+        </div>
+    </div>
+    <div class="Navar-MenuLeft">
+        <h3 class="txt-info-personal">Thông tin cá nhân</h3>
+        <div class="box-Name">
+            <h4>Họ Tên :</h4>
+            <input type="text" id="name" value="Đồng Văn Công" placeholder="Nhập họ tên của bạn" disabled>
+        </div>
+        <div class="box-Name">
+            <h4>ID Name :</h4>
+            <input type="text" id="name" value="12520004" placeholder="Nhập họ tên của bạn" disabled>
+        </div>
+        <div class="box-Name">
+            <h4>Email :</h4>
+            <input type="email" id="email" value="CongKoi090@gmail.com" placeholder="Nhập Email của bạn" disabled>
+        </div>
+        <div class="box-Name">
+            <h4>Số Điện Thoại :</h4>
+            <input type="number" id="number" value="0334624356" placeholder="Nhập số điện thoại của bạn" disabled>
+        </div>
+        <button class="btn-change-password" onclick="changePassword()">Đổi mật khẩu</button>
+        <!-- <div class="box-change-password">
+            <div class="label-input">
+                <label for="old_password" class="txt-input">Mật khẩu hiện tại</label>
+                <input type="text" id="old_password" value="">
+            </div>
+            <div class="label-input">
+                <label for="new_password" class="txt-input">Mật khẩu mới</label>
+                <input type="text" id="new_password" value="">
+            </div>
+            <div class="label-input">
+                <label for="confirm_password" class="txt-input">Xác nhận mật khẩu</label>
+                <input type="text" id="confirm_password" value="">
+            </div>
+        </div> -->
+
+
+
+        <!-- <div class="box-input">
+            <div class="label-input">
+                <label for="name" class="txt-input">Họ tên</label>
+                <br>
+                <input type="text" id="name" value="Văn Dân" placeholder="Nhập họ tên của bạn" disabled>
+            </div>
+            <div class="btn-controls">
+                <button class="btn-fix" onclick="fixInput(this)">Chỉnh sửa</button>
+                <button class="btn-save">Lưu</button>
+                <button class="btn-cancel" onclick="cancelName(this)">Huỷ</button>
+            </div>
+        </div>
+        <div class="box-input">
+            <div class="label-input">
+                <label for="username" class="txt-input">User Name</label>
+                <input type="text" id="username" value="Vandan2507" placeholder="Nhập họ tên của bạn" disabled>
+            </div>
+            <div class="btn-controls">
+                <button class="btn-fix" onclick="fixInput(this)">Chỉnh sửa</button>
+                <button class="btn-save">Lưu</button>
+                <button class="btn-cancel" onclick="cancelName(this)">Huỷ</button>
+            </div>
+        </div>
+        <div class="box-input">
+            <div class="label-input">
+                <label for="email" class="txt-input">Email</label>
+                <input type="text" value="vandan250702@gmail.com" id="email" placeholder="Nhập họ tên của bạn" disabled>
+            </div>
+            <div class="btn-controls">
+                <button class="btn-fix" onclick="fixInput(this)">Chỉnh sửa</button>
+                <button class="btn-save">Lưu</button>
+                <button class="btn-cancel" onclick="cancelName(this)">Huỷ</button>
+            </div>
+        </div>
+        <div class="box-input">
+            <div class="label-input">
+                <label for="phone" class="txt-input">Số điện thoại</label>
+                <input type="text" id="phone" value="0343628648" placeholder="Nhập họ tên của bạn" disabled>
+            </div>
+            <div class="btn-controls">
+                <button class="btn-fix" onclick="fixInput(this)">Chỉnh sửa</button>
+                <button class="btn-save">Lưu</button>
+                <button class="btn-cancel" onclick="cancelName(this)">Huỷ</button>
+            </div>
+        </div>
+        <button class="btn-change-password" onclick="changePassword()">Đổi mật khẩu</button>
+        <div class="box-change-password">
+            <div class="label-input">
+                <label for="old_password" class="txt-input">Mật khẩu hiện tại</label>
+                <input type="text" id="old_password" value="">
+            </div>
+            <div class="label-input">
+                <label for="new_password" class="txt-input">Mật khẩu mới</label>
+                <input type="text" id="new_password" value="">
+            </div>
+            <div class="label-input">
+                <label for="confirm_password" class="txt-input">Xác nhận mật khẩu</label>
+                <input type="text" id="confirm_password" value="">
+            </div>
+        </div> -->
+
+    </div>
+</body>
+</html>

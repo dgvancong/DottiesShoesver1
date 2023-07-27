@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Admin/Css/Home.css">
+    <link rel="icon" href="/Album/BoCuc/z3398273747863_81c41ce47a59fbf2a5832130c0d3308e.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title> Quản Lý - Dotie Shoes</title>
+</head>
+<body>
+    <section class="header">
+        <div class="box-login" id="box-t">
+            Xin chào, <span id="ten_nv">Admin</span> <i class="fas fa-sort-down"></i>
+            <div class="box-login-bottom" id="box-b">
+                <button onclick="TTTaiKhoan()"><i class="fas fa-user-alt"></i> Tài khoản</button>
+                <button onclick="LogOut();"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+            </div>
+        </div>
+    </section>
+    <div class="HomBody">
+        <div class="Navar-MenuRight">
+            <div class="Navar_list">
+                <ul class="Navar_listul">
+                    <a href="/Admin/Html/Home.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_view_sidebar_black_24dp.png">
+                        <span class="Navar_text">Bảng Điều Khiển</span>
+                    </a>
+                    <a href="#" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/fact_check_black_24dp.svg">
+                        <span class="Navar_text">Tin Tức</span>
+                    </a>
+                    <a href="/Admin/Html/Staff.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_supervised_user_circle_black_24dp.png">
+                        <span class="Navar_text">Nhân Viên</span>
+                    </a>
+                    <a href="#" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_diversity_3_black_24dp.png">
+                        <span class="Navar_text">Khách Hàng</span>
+                    </a>
+                    <a href="/Admin/Html/Product.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_local_offer_black_24dp.png">
+                        <span class="Navar_text">Sản Phẩm</span>
+                    </a>
+                    <a href="#" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/receipt_black_24dp.svg">
+                        <span class="Navar_text">Hóa Đơn Nhập</span>
+                    </a>
+                    <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_payment_black_24dp.png">
+                        <span class="Navar_text">Hóa Đơn Bán</span>
+                    </a>
+                    <a href="/Admin/Html/NhaCungCap.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_business_black_24dp.png">
+                        <span class="Navar_text">Nhà Cung Cấp</span>
+                    </a>
+                    <a href="#" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/admin_panel_settings_black_24dp.svg">
+                        <span class="Navar_text">Nội Bộ</span>
+                    </a>
+                    <a href="/Admin/Html/Setting.html" class="Navar_link active">
+                        <img class="Navar_icon" src="/Admin/JPG/baseline_settings_black_24dp.png">
+                        <span class="Navar_text">Cài Đặt</span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="Content-MenuLeft">
+            <div class="color"></div>
+            <div class="Content-MenuLeft-Head">
+                <p>Bảng Điều Khiển</p>
+            </div>
+            <div class="Content-MenuLeft-Item">
+                <div class="Content-MenuLeft-ItemLeft">
+                    <div class="Menu_Item">
+                        <div class="Img_Item">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <div class="Font_Item">
+                            <p class="Font_Item-head"> TỔNG KHÁCH HÀNG</p>
+                            <br>
+                            <p class="Font_Item-center">56 khách hàng</p>
+                            <br>
+                            <span class="Font_Item-info">Tổng số khách hàng được quản lý</span>
+                        </div>
+                    </div>
+                    <div class="Menu_Item1">
+                        <div class="Img_Item1">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+                        <div class="Font_Item">
+                            <p class="Font_Item-head">TỔNG SẢN PHẨM</p>
+                            <br>
+                            <p class="Font_Item-center">1850 sản phẩm</p>
+                            <br>
+                            <span class="Font_Item-info">Tổng số sản phẩm được quản lý</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="Thongke">
+                    <img class="Thongkeimg" src="/Admin/JPG/Capture.png">
+                </div>
+                <div class="Content-MenuLeft-ItemLeft">
+                    <div class="Menu_Item2">
+                        <div class="Img_Item2">
+                            <i class="fa-brands fa-shopify"></i>
+                        </div>
+                        <div class="Font_Item">
+                            <p class="Font_Item-head">TỔNG ĐƠN HÀNG</p>
+                            <br>
+                            <p class="Font_Item-center">247 đơn hàng</p>
+                            <br>
+                            <span class="Font_Item-info">Tổng số đơn hàng trong tháng</span>
+                        </div>
+                    </div>
+                    <div class="Menu_Item3">
+                        <div class="Img_Item3">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="Font_Item">
+                            <p class="Font_Item-head">SẮP HẾT HÀNG</p>
+                            <br>
+                            <p class="Font_Item-center">8 sản phẩm</p>
+                            <br>
+                            <span class="Font_Item-info">Số sản phẩm cảnh báo hết cần nhập thêm.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tile">
+                        <h3 class="tile-title">Tình trạng đơn hàng</h3>
+                      <div>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>ID đơn hàng</th>
+                              <th>Tên khách hàng</th>
+                              <th>Tổng tiền</th>
+                              <th>Trạng thái</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>AL3947</td>
+                              <td>Đồng Văn Công</td>
+                              <td>
+                                19.770.000 đ
+                              </td>
+                              <td><span class="badge bg-info">Chờ xử lý</span></td>
+                            </tr>
+                            <tr>
+                              <td>ER3835</td>
+                              <td>Đặng Hùng Đảng</td>
+                              <td>
+                                16.770.000 đ	
+                              </td>
+                              <td><span class="badge bg-warning">Đang vận chuyển</span></td>
+                            </tr>
+                            <tr>
+                              <td>MD0837</td>
+                              <td>Cao Văn Dân</td>
+                              <td>
+                                9.400.000 đ	
+                              </td>
+                              <td><span class="badge bg-success">Đã hoàn thành</span></td>
+                            </tr>
+                            <tr>
+                              <td>MT9835</td>
+                              <td>Nguyễn Trung Nhật</td>
+                              <td>
+                                40.650.000 đ	
+                              </td>
+                              <td><span class="badge bg-danger">Đã hủy	</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- / div trống-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var user = JSON.parse(localStorage.getItem('user'));
+    if (!user || user == undefined) {
+        window.location.href = 'LoginAdmin.html';
+    }
+
+    function LogOut() {
+        localStorage.setItem('user', null);
+        window.location.href = "LoginAdmin.html";
+    }
+</script>
+</html>
